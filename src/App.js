@@ -3,6 +3,10 @@ import './App.css';
 
 function App() {
   const name = "Jungi"
+  const naver = {
+    name: "네이버",
+    url: "https://naver.com",
+  };
   return (
   <div className="App">
     <h1
@@ -12,6 +16,7 @@ function App() {
       }}>
         Hello, {name}.<p>{2 + 3}</p>
      </h1>
+     <a href={naver.url}>{naver.name}</a>
   </div>
   );
 }
