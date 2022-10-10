@@ -1,24 +1,16 @@
-import './App.css';
-// import Hello from './Hello';
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import { Home, Auth } from './pages';
 
-function App() {
-  const name = "Jungi"
-  const naver = {
-    name: "네이버",
-    url: "https://naver.com",
-  };
-  return (
-  <div className="App">
-    <h1
-      style={{
-        color: "red",
-        backgroundColor: "green",
-      }}>
-        Hello, {name}.<p>{2 + 3}</p>
-     </h1>
-     <a href={naver.url}>{naver.name}</a>
-  </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Route exact path="/" component={Home}/>
+                <Route path="/auth" component={Auth}/>
+            </div>
+        );
+    }
 }
 
 export default App;
