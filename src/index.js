@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from './client/Root';
+// import {createRoot} from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
-// registerServiceWorker();
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
